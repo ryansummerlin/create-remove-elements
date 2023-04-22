@@ -14,17 +14,6 @@ add.addEventListener("click", async () => {
         /*------------ Create new dog card with the url above ------------- */
         /* (use the HTML structure for the current dog image in the index.html
             file to create a new image with the url) */
-        // const newDogLi = document.createElement("li");
-        // const newDogFigure = document.createElement("figure");
-        // const newDogImg = document.createElement("img");
-        // const newDogFigcaption = document.createElement("figcaption");
-
-        // newDogImg.setAttribute("src", "url");
-        // newDogFigcaption.innerText = breed;
-
-        // newDogFigure.appendChild(newDogImg);
-        // newDogFigure.appendChild(newDogFigcaption);
-        // newDogLi.appendChild(newDogFigure);
 
         const newDog = `<li>
                             <figure>
@@ -48,18 +37,22 @@ add.addEventListener("click", async () => {
 const removeFirst = document.getElementById("remove-first");
 removeFirst.addEventListener("click", () => {
     /*-------------------- Select the first dog card --------------------- */
-    // Your code here
+    const gallery = document.body.getElementsByClassName("gallery")[0];
+    const galleryUl = gallery.children[0];
+    const firstDogCard = galleryUl.children[0];
 
     /*-------------------- Remove the first dog card --------------------- */
-    // Your code here
+    firstDogCard.remove();
 });
 
 /************************** REMOVE LAST DOG BUTTON ***************************/
 const removeLast = document.getElementById("remove-last");
 removeLast.addEventListener("click", () => {
     /*-------------------- Select the last dog card ----------------------- */
-    // Your code here
+    const gallery = document.body.getElementsByClassName("gallery")[0];
+    const galleryUl = gallery.children[0];
+    const lastDogCard = galleryUl.children[galleryUl.children.length - 1];
 
     /*-------------------- Remove the last dog card ----------------------- */
-    // Your code here
+    lastDogCard.remove();
 });
